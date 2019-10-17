@@ -22,7 +22,7 @@ for wikipage in reddit.subreddit('gatech').wiki:
     page_rev_dt = datetime.fromtimestamp(wikipage.revision_date)
 
     if page_rev_dt > yesterday:
-        updated_recently = updated_recently + "|" + wikipage.name + "|" + wikipage.revision_by.name + "|\n"
+        updated_recently = updated_recently + "|[www.reddit.com/r/gatech/wiki/" + wikipage.name + "](" + wikipage.name + ")|" + wikipage.revision_by.name + "|\n"
 
 if(updated_recently):
     message_body = '''
